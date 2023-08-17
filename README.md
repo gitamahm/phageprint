@@ -1,4 +1,4 @@
-# phageprint
+# Phageprint
 #### Human Phageprints: Individuals can be identified by a small number of globally distributed, temporally persistent resident phage families
 <img src="https://github.com/gitamahm/phageprint/blob/main/phageprint.png" width="100%" height="100%">
 
