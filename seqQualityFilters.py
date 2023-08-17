@@ -1,7 +1,6 @@
 #! /usr/bin/env python
 
 """Author: Gita Mahmoudabadi
-Email: gita@caltech.edu
 Phillips Lab, Caltech
 11/18/2014
 """
