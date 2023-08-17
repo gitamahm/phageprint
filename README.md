@@ -9,5 +9,5 @@ Additionally, we have included several Jupyter notebooks used for further proces
 - **`p01_databaseCreationSC_microbeDB_fungalDB.ipynb`**
     - the purpose of this notebook is to create microbeDB and other databases used in the SIMBA pipeline
 - **`p02_creating_truth_datasets_for_testing_simba.ipynb`**
-	- the purpose of this notebook is to create truth datasets for testing the precision and recall of SIMBA and Kraken2
+	- the purpose of this notebook is to create truth datasets for testing the precision and recall of SIMBA 
 
