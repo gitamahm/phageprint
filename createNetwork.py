@@ -4,12 +4,6 @@ from numpy import *
 import matplotlib.pyplot as plt
 from pylab import *
 import os
-#from Bio import SeqIO
-#from Bio.Seq import Seq
-#from Bio.SeqRecord import SeqRecord
-#from Bio.Alphabet import IUPAC
-#import re
-
 
 # note rows are abundance values for a given OTU across all samples, and columns are abundances of all OTUs across a given sample. 
 
