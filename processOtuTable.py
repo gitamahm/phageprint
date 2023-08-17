@@ -1,11 +1,9 @@
 #! /usr/bin/env python
 """Author: Gita Mahmoudabadi
-Email: gita@caltech.edu
 Phillips Lab, Caltech
 11/18/2014
 """
 import sys
-sys.path.append('~/Desktop/All/phd/rsch/bioinfo/biopython-1.64/ngs')
 from numpy import *
 import matplotlib.pyplot as plt
 from pylab import *
@@ -95,39 +93,6 @@ for id in range(len(ord_ids)):
 np.savetxt('filtered_otu_table.txt', table3, header= head, delimiter='\t', fmt = '%1.2f')
 file0.close()
 
-'''
-######--------------A different kind of filter for noisy OTUs-----------------------------
-
-
-# This section is commented out because it's code for a different type of filtering scheme. Here, setting to zero the read count for OTUs with less than 10 sequences in a sample, and then getting rid of any OTUs that don't show up at all in samples after this step. 
-
-newtable=table[:]
-
-
-count=0
-for col in range(len(newtable[0][:])): #0:16 for HB1 (samples)
-	for row in range(len(newtable)):  #0:188 for HB1  (otus)
-		if newtable[row][col] < 10.0:
-			newtable[row][col] = 0.0
-			count = count+1
-print 'this is the count of OTUs each defined by less than 10 sequences within the OTU table: \n', count
-
-
-# removing the OTUs that now appear in zero samples after the above filter was implemented. 
-
-noise=[]
-
-for row in range(len(newtable)):
-	if sum(newtable[row]) == 0.0:
-		noise.append(row)  #collecting the indices that correspond to OTUs that need to be filtered out of the new OTU table.		
-print 'these are the OTUs that are now filtered out because they do not show up in any sample after the first filter was applied: \n', noise, '\n and the number of them:', len(noise)
-
-bad_otus = set(noise)  #making a set out of the indices that correspond to OTUs that need to be filtered out of the new OTU table.
-newtable = [ value for index, value in enumerate(newtable) if index not in bad_otus]
-newotus = [value for index, value in enumerate(otus) if index not in bad_otus]
-print 'this is the new otu table: \n', newtable
-print 'this is the list of otus that passed the filter: \n', newotus		 
-'''
 
 
 with open('filtered_otu_table.txt','r') as g:
@@ -281,21 +246,6 @@ for sample in range(len(samples)):
 file2.close()
 
 
-'''
-#Writing a file that will contain r^2 values. I don't think I'll need them so I have commented it out. 
-
-file3 = open('r2_matrix.txt','r+')
-file3.write('\t')
-for sample in range(len(samples)):
-	file3.write(samples[sample] + '\t')
-file3.write('\n')
-
-for sample in range(len(samples)):
-	file3.write(samples[sample]+'\t')
-	for hh in range(len(r2_mat[:])):
-		file3.write(str(r2_mat[hh][otu]) + '\t')
-	file3.write('\n')
-file3.close()
 
 ######-----------------Plotting phageprints-----------------------------------------------
 
@@ -314,4 +264,3 @@ for d in range(n):  #which is 0:16
 	#plt.ylabel('Relative OTU abundance across samples')
 	
 plt.show()
-'''
