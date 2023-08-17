@@ -1,4 +1,8 @@
 #! /usr/bin/env python
+"""Author: Gita Mahmoudabadi
+Phillips Lab, Caltech
+11/18/2014
+"""
 import sys
 from numpy import *
 import matplotlib.pyplot as plt
