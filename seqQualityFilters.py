@@ -34,9 +34,6 @@ barcodes that are incorrect. It writes sequences with the correct barcodes to on
 """
 
 
-
-#os.chdir('/Users/octatig88/Desktop/all/phd/rsch/bioinfo/biopython-1.64/ngs/miseq_data/sibling/fastqJoinedP0/')
-
 #PART 1..................................................................................
 
 file_j = 'fastqjoin.join.fastq' #this is the file containing all joined paired end reads
