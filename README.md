@@ -18,8 +18,3 @@ In addition to these notebooks, there are three custom python scripts that we wr
     - creates a network where OTUs are connected to the samples that they are found in with weighted edges based on OTU relative abundance
 
 Lastly, we provide examples of the QIIME scripts used in the document called **`examples_of_QIIME_commands`**
-
-make_distance_boxplots.py -m ../allMapsMerged_v2.txt -d binary_jaccard_dm.txt -f StudyTimesSubjID -o binaryJaccardBoxPlots --save_raw_data
-
-make_distance_boxplots.py -m ../allMapsMerged_v2.txt -d abund_jaccard_dm.txt -f StudyTimesSubjID -o abundanceJaccardBoxPlots --save_raw_data
-
